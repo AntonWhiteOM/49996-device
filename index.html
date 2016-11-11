@@ -33,7 +33,7 @@
           </div>
         </div>
       </div>
-      <div class="header-row clearfix">
+      <nav class="header-row clearfix">
         <div class="header-col-left">
           <ul class="catalog-menu">
             <li>
@@ -70,7 +70,7 @@
             <li><a class="link-menu" href="#">Контакты</a></li>
           </ul>
         </div>
-      </div>
+      </nav>
     </header>
 
     <section class="promo container clearfix">
@@ -167,28 +167,28 @@
 
     <section class="services">
       <div class="container clearfix">
-        <ul class="services-list">
-          <li class="btn btn-services services-active"><span>Доставка</span></li>
-          <li class="btn btn-services"><span>Гарантия</span></li>
-          <li class="btn btn-services"><span>Кредит</span></li>
-        </ul>
+        <div class="services-list">
+          <a  class="btn btn-services services-active" id="tab-1" href="#delivery"><span>Доставка</span></a>
+          <a  class="btn btn-services" id="tab-2" href="#waranty"><span>Гарантия</span></a>
+          <a  class="btn btn-services" id="tab-3" href="#credit"><span>Кредит</span></a>
+        </div>
         <div class="services-description">
-          <div class="service-info">
-            <h2 class="service-info-title">Доставка</h2>
+          <div class="service-info service-current" id="tab-content-1">
+            <h2 class="service-info-title" id="delivery">Доставка</h2>
             <p class="service-info-text">
               Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
               Ведь мы неплохо заработаем, поднимая его на ваш этаж.
             </p>
           </div>
-          <div class="service-info">
-            <h2 class="service-info-title">Гарантия</h2>
+          <div class="service-info" id="tab-content-2">
+            <h2 class="service-info-title" id="waranty">Гарантия</h2>
             <p class="service-info-text">
               Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
               Товар, не дом, конечно же.
             </p>
           </div>
-          <div class="service-info">
-            <h2 class="service-info-title">Кредит</h2>
+          <div class="service-info" id="tab-content-3">
+            <h2 class="service-info-title" id="credit">Кредит</h2>
             <p class="service-info-text">
               Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
               условия кредита. Выгодные для нашего банка, разумеется.
@@ -220,8 +220,10 @@
       <div class="contacts">
         <h2 class="company-info-title">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <a href="#" class="link-map"><img src="img/map.png" alt="Наш офис на карте" width="560" height="222"></a>
-        <a href="#" class="btn btn-write-us"><span>Напишите нам</span></a>
+        <a class="link-map" id="btn-map" href="#">
+          <img src="img/map.png" alt="Наш офис на карте" width="560" height="222">
+        </a>
+        <a class="btn btn-write-us" id="btn-write-us" href="#" ><span>Напишите нам</span></a>
       </div>
     </section>
 
@@ -265,5 +267,32 @@
       </div>
     </footer>
 
+    <div class="modal-content modal-write-us modal-closed" id="modal-write-us">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <form class="form-writeus" action="#" method="post">
+        <div class="form-row">
+          <div class="form-col-half">
+            <label for="name-field">Ваше имя:</label>
+            <input type="text" id="name-field" placeholder="Представьтесь, пожалуйста" autofocus>
+          </div>
+          <div class="form-col-half">
+            <label for="email-field">Ваш e-mail:</label>
+            <input type="email" id="email-field" placeholder="Для отправки ответа">
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="text-field">Текст письма:</label>
+          <textarea name="text-field" rows="8" cols="40" placeholder="В свободной форме"></textarea>
+        </div>
+        <button class="btn"><span>Отправить</span></button>
+      </form>
+    </div>
+
+    <div class="modal-content modal-closed" id="modal-map">
+      <button class="modal-content-close" id="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1123749473563!2d37.52742931589352!3d55.68703400453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1478859076626" width="960" height="559" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <div class="modal-overlay modal-closed"></div>
+  <script src="js/common.js"></script>
   </body>
 </html>

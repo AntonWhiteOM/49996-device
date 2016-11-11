@@ -1,38 +1,51 @@
 @font-face {
   font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
   src:
   local("Open Sans"),
-  url("../fonts/opensans.woff") format("woff"),
-  url("../fonts/opensans.woff2") format("woff2");
+  url("../fonts/opensans.woff2") format("woff2"),
+  url("../fonts/opensans.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Open Sans Light";
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 200;
   src:
   local("Open Sans Light"),
-  url("../fonts/opensanslight.woff") format("woff"),
-  url("../fonts/opensanslight.woff2") format("woff2");
+  url("../fonts/opensanslight.woff2") format("woff2"),
+  url("../fonts/opensanslight.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Gillroy Light";
+  font-family: "Gillroy";
+  font-style: normal;
+  font-weight: 200;
   src:
   local("Gillroy Light"),
-  url("../fonts/gilroylight.woff") format("woff"),
-  url("../fonts/gilroylight.woff2") format("woff2");
+  url("../fonts/gilroylight.woff2") format("woff2"),
+  url("../fonts/gilroylight.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Gillroy ExtraBold";
+  font-family: "Gillroy";
+  font-style: normal;
+  font-weight: 700;
   src:
   local("Gillroy ExtraBold"),
-  url("../fonts/gilroyextrabold.woff") format("woff"),
-  url("../fonts/gilroyextrabold.woff2") format("woff2");
+  url("../fonts/gilroyextrabold.woff2") format("woff2"),
+  url("../fonts/gilroyextrabold.woff") format("woff");
+
 }
 
 body {
-  font: 15px/2.0 "Open Sans Light", "Arial", sans;
+  min-width: 1200px;
+  font: 15px/2.0 "Open Sans", "Arial", sans;
+  font-style: normal;
+  font-weight: 200;
   color: #000;
+  background-color: #fff;
 }
 
 a {
@@ -96,7 +109,9 @@ a:active {
 }
 
 .link-menu {
-  font: 18px "Gillroy ExtraBold", "Arial", sans;
+  font: 18px "Gillroy", "Arial", sans;
+  font-style: normal;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
 }
@@ -116,21 +131,11 @@ a:active {
   background-position: -20px -630px;
 }
 
-/*.main-header .link-icon:hover,
-.link-menu:hover,
-.catalog-submenu a:hover  {
-  opacity: 0.6;
-}*/
-
-/*.main-header .link:active,
-.link-menu:active,
-.catalog-submenu a:active  {
-  opacity: 0.3;
-}*/
-
 .btn {
   position: relative;
-  font: 18px/1 "Gillroy ExtraBold", "Arial", sans;
+  font: 18px/1 "Gillroy", "Arial", sans;
+  font-style: normal;
+  font-weight: 700;
   text-decoration: none;;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -138,7 +143,7 @@ a:active {
   padding: 11px 42px;
   display: inline-block;
   z-index: 25;
-
+  cursor: pointer;
 }
 
 .btn span {
@@ -161,13 +166,19 @@ a:active {
 }
 
 .btn:hover::before,
+.btn:focus::before,
 .btn:active::before {
   height: 100%;
 }
 
 .btn:hover,
+.btn:focus,
 .btn:active {
   opacity: 1;
+}
+
+.btn:focus {
+  outline: none;
 }
 
 .btn:active {
@@ -229,6 +240,7 @@ a:active {
 
 .header-row:first-of-type {
   min-height: 55px;
+  padding-bottom: 24px;
 }
 
 .header-row:first-of-type .header-col-right {
@@ -236,7 +248,8 @@ a:active {
 }
 
 .header-row:nth-of-type(2) {
-  margin-top: 24px;
+  min-height: 45px;
+  padding-bottom: 144px;
 }
 
 .header-col-left {
@@ -324,11 +337,12 @@ input[type="search"]:focus+button {
 
 .user-area {
   float: left;
-  width: 250px;
+  max-width: 260px;
 }
 
 .commerce-area {
   float: right;
+  max-width: 240px;
   text-align: right;
 }
 
@@ -521,7 +535,9 @@ input[type="search"]:focus+button {
   right: 48px;
   margin: 0;
   padding: 0;
-  font: 179px/0.8 "Gillroy ExtraBold", "Arial", sans;
+  font: 179px/0.8 "Gillroy", "Arial", sans;
+  font-style: normal;
+  font-weight: 700;
   color: #fff;
 }
 
@@ -530,7 +546,9 @@ input[type="search"]:focus+button {
   position: relative;
   margin-top: 77px;
   margin-bottom: 20px;
-  font: 47px/1.2 "Gillroy ExtraBold", "Arial", sans;
+  font: 47px/1.2 "Gillroy", "Arial", sans;
+  font-style: normal;
+  font-weight: 700;
   z-index: 50;
 }
 
@@ -544,7 +562,9 @@ input[type="search"]:focus+button {
 }
 
 .item-parameters th {
-  font: 36px/1.2 "Gillroy Light", "Arial", sans;
+  font: 36px/1.2 "Gillroy", "Arial", sans;
+  font-style: normal;
+  font-weight: 200;
   text-align: left;
 }
 
@@ -588,7 +608,9 @@ input[type="search"]:focus+button {
   display: block;
   position: relative;
   padding-top: 195px;
-  font: 18px/1.2 "Gillroy ExtraBold", "Arial", sans;
+  font: 18px/1.2 "Gillroy", "Arial", sans;
+  font-style: normal;
+  font-weight: 700;
 
 }
 
@@ -689,10 +711,9 @@ input[type="search"]:focus+button {
   padding: 0;
   margin: 0;
   padding-top: 80px;
-  list-style: none;
 }
 
-.services-list li {
+.services-list a {
   min-width: 130px;
   padding: 11px 15px;
   margin-bottom: 24px;
@@ -734,10 +755,6 @@ input[type="search"]:focus+button {
 .service-info {
   position: relative;
   padding-right: 280px;
-}
-
-.service-info:nth-of-type(2),
-.service-info:nth-of-type(3) {
   display: none;
 }
 
@@ -781,7 +798,9 @@ input[type="search"]:focus+button {
 }
 
 .service-info-title {
-  font: 47px/1.2 "Gillroy ExtraBold", "Arial", sans;
+  font: 47px/1.2 "Gillroy", "Arial", sans;
+  font-style: normal;
+  font-weight: 700;
   margin-bottom: 27px;
 }
 
@@ -811,7 +830,9 @@ input[type="search"]:focus+button {
 }
 
 .company-info-title {
-  font: 47px/1.2 "Gillroy ExtraBold", "Arial", sans;
+  font: 47px/1.2 "Gillroy", "Arial", sans;
+  font-style: normal;
+  font-weight: 700;
   margin-bottom: 37px;
 }
 
@@ -837,7 +858,9 @@ input[type="search"]:focus+button {
   padding-top: 7px;
   margin-bottom: 54px;
   list-style: none;
-  font: 16px/2.5 "Gillroy ExtraBold", "Arial", sans;
+  font: 16px/2.5 "Gillroy", "Arial", sans;
+  font-style: normal;
+  font-weight: 700;
 }
 
 .custom-list-01 li {
@@ -1094,4 +1117,178 @@ input[type="search"]:focus+button {
 
 .link-dev:active {
   opacity: 0.3;
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  width: 960px;
+  font-size: 0;
+  background-color: #fff;
+  z-index: 50;
+  box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
+}
+
+.modal-write-us::before {
+  content: "";
+  position: absolute;
+  top: 43px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  bottom: 80px;
+  background-color: inherit;
+  box-shadow: 0 20px 40px 0 rgba(4, 6, 6, 0.75);
+  z-index: 30;
+}
+
+.modal-content-close {
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  top: 22px;
+  right: 22px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(240, 197, 46, 0.5);
+  cursor: pointer;
+  font-size: 0;
+  z-index: 50;
+}
+
+.modal-content-close:hover,
+.modal-content-close:focus {
+  outline: none;
+  background-color: rgba(240, 197, 46, 1);
+}
+
+.modal-content-close::before,
+.modal-content-close::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 2px;
+  left: 50%;
+  top: 50%;
+  margin-top: -1px;
+  margin-left: -15px;
+  background-color: rgba(255, 255, 255, 1);
+  transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-content-close:active::before,
+.modal-content-close:active::after {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.form-writeus {
+  position: relative;
+  padding: 100px;
+  padding-bottom: 80px;
+  z-index: 40;
+  background-color: #fff;
+}
+
+.form-writeus .form-row {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  width: 100%;
+  font-size: 0;
+}
+
+.form-writeus .form-col-half {
+  display: inline-block;
+  vertical-align: top;
+  width: 360px;
+  margin-right: 40px;
+}
+
+.form-writeus .form-col-half:nth-child(2n) {
+  margin-right: 0;
+}
+
+.form-writeus label {
+  display: block;
+  margin-bottom: 6px;
+  font: 18px/1 "Gillroy", "Arial", sans;
+  font-style: normal;
+  font-weight: 700;
+
+
+}
+
+.form-writeus input[type="text"],
+.form-writeus input[type="email"],
+.form-writeus textarea {
+  width: 100%;
+  padding: 7px 15px;
+  border: 3px solid #f2f2f2;
+  margin-top: 6px;
+  font: 14px/18px "Open Sans", "Arial", sans;
+  font-style: normal;
+  font-weight: normal;
+  color: rgba(70, 70, 70, 0.4);
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+
+.form-writeus input[type="text"]:hover,
+.form-writeus input[type="email"]:hover,
+.form-writeus textarea:hover {
+  background-color: #eaeaea;
+  border-color: #eaeaea;
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.form-writeus input[type="text"]:focus,
+.form-writeus input[type="email"]:focus,
+.form-writeus textarea:focus {
+  outline: none;
+  background-color: #fff;
+  border-color: #e5e5e5;
+  color: rgba(70, 70, 70, 1);
+}
+
+.form-writeus input[type="text"]:invalid:not(:hover):not(:focus),
+.form-writeus input[type="email"]:invalid:not(:hover):not(:focus),
+.form-writeus textarea:invalid:not(:hover):not(:focus) {
+  background-color: #f6dada;
+  border-color: #f6dada;
+}
+
+.form-writeus .btn {
+  margin-top: 10px;
+  border: none;
+  background-color: transparent;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 40;
+}
+
+.modal-closed {
+  display: none;
+}
+
+.service-current,
+.delivery,
+.waranty,
+.credit {
+  display: block;
 }
