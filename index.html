@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="no-js">
   <head>
     <meta charset="utf-8">
     <title>Главная | Device</title>
@@ -9,10 +9,11 @@
   <body>
 
     <header class="main-header container">
-      <a class="wrap-logo index-logo">
-        <img src="img/logo-device-index.png" alt="Device" width="163" height="36">
+      <h1 class="vis-hidden">DEVICE — магазин гаджетов</h1>
+      <a class="wrap-logo">
+        <img src="img/logo-device-index.png" alt="[logo] Device" width="163" height="36">
       </a>
-      <div class="header-row clearfix">
+      <div class="header-top clearfix">
         <div class="header-col-left">
           <form action="#" class="search-form">
             <input type="search" placeholder="Поиск по сайту">
@@ -20,10 +21,10 @@
           </form>
         </div>
         <div class="header-col-right">
-          <div class="user-area">
+          <div class="user-nav">
             <a href="#" class="link-icon link-icon-login">Войти</a>
           </div>
-          <div class="commerce-area">
+          <div class="commerce-nav">
             <div class="compare">
               <a href="#" class="link-icon link-icon-compare">Сравнить</a>
             </div>
@@ -33,7 +34,7 @@
           </div>
         </div>
       </div>
-      <nav class="header-row clearfix">
+      <nav class="header-bottom clearfix">
         <div class="header-col-left">
           <ul class="catalog-menu">
             <li>
@@ -74,17 +75,16 @@
     </header>
 
     <section class="promo container clearfix">
-      <input type="radio" id="control-1" name="toggle" checked>
-      <input type="radio" id="control-2" name="toggle">
-      <input type="radio" id="control-3" name="toggle">
-      <div class="slider-controls">
-        <label for="control-1">Монопод</label>
-        <label for="control-2">Фитнес-браслет</label>
-        <label for="control-3">Квадрокоптер</label>
-      </div>
-      <div class="slider-inner">
+      <h2 class="vis-hidden">Популярные товары</h2>
+      <ul class="promo-controls">
+        <li class="promo-active" id="promo-tab-1"><a href="#monopod">Монопод</a></li>
+        <li id="promo-tab-2"><a href="#band">Фитнес-браслет</a></li>
+        <li id="promo-tab-3"><a href="#dron">Квадрокоптер</a></li>
+      </ul>
+      <div class="promo-wrapper">
         <div class="promo-list">
           <div class="promo-item">
+            <h3 class="vis-hidden" id="monopod">Монопод</h3>
             <div class="item-photo item-photo-monopod">
               <img src="img/slider-monopod.png" alt="Монопод" width="384" height="486">
             </div>
@@ -109,6 +109,7 @@
             </div>
           </div>
           <div class="promo-item">
+            <h3 class="vis-hidden" id="band">Фитнесс-браслет</h3>
             <div class="item-photo item-photo-band">
               <img src="img/slider-band.png" alt="Браслет" width="345" height="485">
             </div>
@@ -129,6 +130,7 @@
             </div>
           </div>
           <div class="promo-item">
+            <h3 class="vis-hidden" id="dron">Квадрокоптер</h3>
             <div class="item-photo item-photo-dron">
               <img src="img/slider-dron.png" alt="Дрон" width="526" height="334">
             </div>
@@ -155,6 +157,7 @@
     </section>
 
     <section class="catalog container">
+      <h2 class="vis-hidden">Каталог товаров</h2>
       <ul class="catalog-list">
         <li><a href="#" class="link-popular link-popular-01">Виртуальная реальность</a></li>
         <li><a href="#" class="link-popular link-popular-02">Моноподы для&nbsp;селфи</a></li>
@@ -166,29 +169,30 @@
     </section>
 
     <section class="services">
+      <h2 class="vis-hidden">Условия работы</h2>
       <div class="container clearfix">
         <div class="services-list">
-          <a  class="btn btn-services services-active" id="tab-1" href="#delivery"><span>Доставка</span></a>
-          <a  class="btn btn-services" id="tab-2" href="#waranty"><span>Гарантия</span></a>
-          <a  class="btn btn-services" id="tab-3" href="#credit"><span>Кредит</span></a>
+          <a class="btn btn-services services-active" id="service-tab-1" href="#delivery"><span>Доставка</span></a>
+          <a class="btn btn-services" id="service-tab-2" href="#waranty"><span>Гарантия</span></a>
+          <a class="btn btn-services" id="service-tab-3" href="#credit"><span>Кредит</span></a>
         </div>
         <div class="services-description">
-          <div class="service-info service-current" id="tab-content-1">
-            <h2 class="service-info-title" id="delivery">Доставка</h2>
+          <div class="service-info service-current" id="service-tab-content-1">
+            <h3 class="service-info-title" id="delivery">Доставка</h3>
             <p class="service-info-text">
               Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
               Ведь мы неплохо заработаем, поднимая его на ваш этаж.
             </p>
           </div>
-          <div class="service-info" id="tab-content-2">
-            <h2 class="service-info-title" id="waranty">Гарантия</h2>
+          <div class="service-info" id="service-tab-content-2">
+            <h3 class="service-info-title" id="waranty">Гарантия</h3>
             <p class="service-info-text">
               Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
               Товар, не дом, конечно же.
             </p>
           </div>
-          <div class="service-info" id="tab-content-3">
-            <h2 class="service-info-title" id="credit">Кредит</h2>
+          <div class="service-info" id="service-tab-content-3">
+            <h3 class="service-info-title" id="credit">Кредит</h3>
             <p class="service-info-text">
               Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
               условия кредита. Выгодные для нашего банка, разумеется.
@@ -199,14 +203,17 @@
     </section>
 
     <section class="logos container">
-      <div class="logo-item"><img src="img/logo-dji.png" alt="Логотип DJI" width="260" height="100"></div>
-      <div class="logo-item"><img src="img/logo-spgadgets.png" alt="Логотип SP Gadgets" width="260" height="100"></div>
-      <div class="logo-item"><img src="img/logo-gopro.png" alt="Логотип GoPro" width="260" height="100"></div>
-      <div class="logo-item"><img src="img/logo-vive.png" alt="Логотип Vive" width="260" height="100"></div>
+      <h2 class="vis-hidden">Производители</h2>
+      <div class="logo-list">
+        <div class="logo-item"><img src="img/logo-dji.png" alt="Логотип DJI" width="260" height="100"></div>
+        <div class="logo-item"><img src="img/logo-spgadgets.png" alt="Логотип SP Gadgets" width="260" height="100"></div>
+        <div class="logo-item"><img src="img/logo-gopro.png" alt="Логотип GoPro" width="260" height="100"></div>
+        <div class="logo-item"><img src="img/logo-vive.png" alt="Логотип Vive" width="260" height="100"></div>
+      </div>
     </section>
 
     <section class="company-info container clearfix">
-      <div class="about">
+      <section class="about">
         <h2 class="company-info-title">О нас</h2>
         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
         <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
@@ -216,25 +223,25 @@
           <li>ЖелДорЭкспедиция</li>
         </ul>
         <a href="#" class="btn btn-about"><span>Подробнее о нас</span></a>
-      </div>
-      <div class="contacts">
+      </section>
+      <section class="contacts">
         <h2 class="company-info-title">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <a class="link-map" id="btn-map" href="#">
+        <a class="link-map" id="btn-map" href="map.html">
           <img src="img/map.png" alt="Наш офис на карте" width="560" height="222">
         </a>
-        <a class="btn btn-write-us" id="btn-write-us" href="#" ><span>Напишите нам</span></a>
-      </div>
+        <a class="btn btn-write-us" id="btn-write-us" href="write-us.html" ><span>Напишите нам</span></a>
+      </section>
     </section>
 
     <footer class="main-footer">
       <div class="container">
         <div class="footer-top clearfix">
-          <a class="wrap-logo footer-logo">
+          <a class="wrap-logo">
             <img src="img/logo-device-footer.png" alt="Device" width="163" height="36">
           </a>
           <div class="footer-extra-nav">
-            <div class="user-area">
+            <div class="user-nav">
               <a href="#" class="link-icon link-icon-login">Войти</a>
             </div>
             <div class="compare">
@@ -246,7 +253,7 @@
           </div>
         </div>
         <div class="footer-middle clearfix">
-          <p class="footer-adress">г. Москва, ул. Строителей, 15</p>
+          <p class="footer-adress"><span class="vis-hidden">Адрес:</span> г. Москва, ул. Строителей, 15</p>
           <ul class="footer-nav">
             <li><a class="link-menu" href="#">Доставка</a></li>
             <li><a class="link-menu" href="#">Гарантия</a></li>
@@ -256,43 +263,48 @@
         </div>
         <div class="footer-bottom clearfix">
           <div class="footer-social">
+            <b class="vis-hidden">Присоединяйтесь к нам в соц. сетях:</b>
             <a href="#" class="link-fb">Фейсбук</a>
             <a href="#" class="link-insta">Инстаграм</a>
             <a href="#" class="link-tw">Твиттер</a>
           </div>
           <div class="footer-dev-info">
+            <b class="vis-hidden">Разработано в</b>
             <a href="#" class="link-dev">HTML Academy</a>
           </div>
         </div>
       </div>
     </footer>
 
-    <div class="modal-content modal-write-us modal-closed" id="modal-write-us">
-      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+    <div class="modal-content modal-write-us" id="modal-write-us">
+      <h2 class="vis-hidden">Связаться с нами</h2>
       <form class="form-writeus" action="#" method="post">
         <div class="form-row">
           <div class="form-col-half">
             <label for="name-field">Ваше имя:</label>
-            <input type="text" id="name-field" placeholder="Представьтесь, пожалуйста" autofocus>
+            <input type="text" name="name-field" id="name-field" placeholder="Представьтесь, пожалуйста">
           </div>
           <div class="form-col-half">
             <label for="email-field">Ваш e-mail:</label>
-            <input type="email" id="email-field" placeholder="Для отправки ответа">
+            <input type="email" name="email-field" id="email-field" placeholder="Для отправки ответа">
           </div>
         </div>
         <div class="form-row">
           <label for="text-field">Текст письма:</label>
-          <textarea name="text-field" rows="8" cols="40" placeholder="В свободной форме"></textarea>
+          <textarea name="text-field" id="text-field" rows="8" cols="40" placeholder="В свободной форме"></textarea>
         </div>
         <button class="btn"><span>Отправить</span></button>
       </form>
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
     </div>
 
-    <div class="modal-content modal-closed" id="modal-map">
+    <div class="modal-content" id="modal-map">
+      <h2 class="vis-hidden">Мы на карте</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1123749473563!2d37.52742931589352!3d55.68703400453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1478859076626" width="960" height="559" style="border:0" allowfullscreen></iframe>
       <button class="modal-content-close" id="modal-content-close" type="button" title="Закрыть">Закрыть</button>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1123749473563!2d37.52742931589352!3d55.68703400453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1478859076626" width="960" height="559" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
-    <div class="modal-overlay modal-closed"></div>
-  <script src="js/common.js"></script>
+
+    <div class="modal-overlay"></div>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
