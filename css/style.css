@@ -298,6 +298,10 @@ a:not([href]):active {
   border: none;
 }
 
+.js .search-form input[type="search"].bottom-line {
+  border-bottom: 2px solid #000;
+}
+
 .search-form input[type="search"]::-moz-placeholder {
   color: rgba(0,0,0,0.3);
 }
@@ -342,6 +346,10 @@ a:not([href]):active {
   display: none;
 }
 
+.js .search-form .btn-show {
+  display: block;
+}
+
 .search-form button:focus {
   outline: none;
 }
@@ -359,7 +367,6 @@ a:not([href]):active {
 .js input[type="search"]:focus+button {
   display: block;
 }
-
 
 .user-nav {
   float: left;

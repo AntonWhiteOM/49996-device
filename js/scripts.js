@@ -13,6 +13,20 @@ var modalOverlay = document.querySelector('.modal-overlay');
 var servicesTabs = document.querySelectorAll('.services-list a');
 var promoTabs = document.querySelectorAll('.promo-controls li');
 
+var searchForm = document.querySelector('.search-form');
+var searchField = searchForm.querySelector('[type=search]');
+var searchBtn = searchForm.querySelector('[type=submit]');
+
+searchField.addEventListener('change', function() {
+  if (searchField.value) {
+    searchBtn.classList.add('btn-show');
+    searchField.classList.add('bottom-line');
+  } else {
+    searchBtn.classList.remove('btn-show');
+    searchField.classList.remove('bottom-line');
+  }
+});
+
 var html = document.documentElement;
 
 html.className = html.className.replace("no-js","js");
