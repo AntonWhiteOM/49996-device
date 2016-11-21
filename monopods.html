@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru" class="js">
+<html lang="ru" class="no-js">
   <head>
     <meta charset="utf-8">
     <title>Моноподы для селфи | Device</title>
+    <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="catalog-page">
 
@@ -15,8 +16,8 @@
       <div class="header-top clearfix">
         <div class="header-col-left">
           <form action="#" class="search-form">
-            <input type="search" placeholder="Поиск по сайту">
-            <button type="submit" name="button">Найти</button>
+            <input class="search-field" type="search" placeholder="Поиск по сайту">
+            <button class="search-button" type="submit">Найти</button>
           </form>
         </div>
         <div class="header-col-right">
@@ -97,8 +98,8 @@
           </ul>
           <i class="vis-hidden">Порядок сортировки:</i>
           <ul class="sorting-direction">
-            <li><a>Прямой</a></li>
-            <li><a href="#">Обратный</a></li>
+            <li><a class="sorting-up">Прямой</a></li>
+            <li><a class="sorting-down" href="#">Обратный</a></li>
           </ul>
         </div>
       </div>
@@ -123,38 +124,38 @@
             <div class="filters-color">
               <i class="filters-name">Цвет</i>
               <p>
-                <input type="checkbox" id="color-1" checked>
+                <input type="checkbox" id="color-1" name="color-black" checked>
                 <label for="color-1">Черный</label>
               </p>
               <p>
-                <input type="checkbox" id="color-2">
+                <input type="checkbox" id="color-2" name="color-white">
                 <label for="color-2">Белый</label>
               </p>
               <p>
-                <input type="checkbox" id="color-3" checked>
+                <input type="checkbox" id="color-3" name="color-blue" checked>
                 <label for="color-3">Синий</label>
               </p>
               <p>
-                <input type="checkbox" id="color-4" checked>
+                <input type="checkbox" id="color-4" name="color-red" checked>
                 <label for="color-4">Красный</label>
               </p>
               <p>
-                <input type="checkbox" id="color-5">
+                <input type="checkbox" id="color-5" name="color-pink">
                 <label for="color-5">Розовый</label>
               </p>
             </div>
             <div class="filters-bluetooth">
               <i class="filters-name">Bluetooth</i>
               <p>
-                <input type="radio" name="bluetooth" id="variant-1" checked>
+                <input type="radio" name="bluetooth" value="bth-yes" id="variant-1" checked>
                 <label for="variant-1">Есть</label>
               </p>
               <p>
-                <input type="radio" name="bluetooth" id="variant-2">
+                <input type="radio" name="bluetooth" value="bth-no" id="variant-2">
                 <label for="variant-2">Нет</label>
               </p>
             </div>
-            <button class="btn"><span>Показать</span></button>
+            <button class="btn" type="submit"><span>Показать</span></button>
           </form>
         </div>
 

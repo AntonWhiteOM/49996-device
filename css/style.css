@@ -40,7 +40,7 @@
 
 body {
   min-width: 1200px;
-  font: 15px/2.0 "Open Sans", "Arial", sans;
+  font: 15px/2.0 "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 200;
   color: #000;
@@ -76,6 +76,7 @@ a:not([href]):active {
 .link-icon {
   position: relative;
   display: inline-block;
+  vertical-align: top;
   padding-left: 27px;
 }
 
@@ -120,12 +121,12 @@ a:not([href]):active {
 }
 
 .link-logout {
-  margin-left: 15px;
+  margin-left: 20px;
   opacity: 0.3;
 }
 
 .link-menu {
-  font: 18px "Gillroy", "Arial", sans;
+  font: 18px "Gillroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
@@ -149,7 +150,7 @@ a:not([href]):active {
 
 .btn {
   position: relative;
-  font: 18px/1 "Gillroy", "Arial", sans;
+  font: 18px/1 "Gillroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   text-decoration: none;;
@@ -158,6 +159,7 @@ a:not([href]):active {
   color: #000;
   padding: 11px 42px;
   display: inline-block;
+  vertical-align: top;
   z-index: 25;
   cursor: pointer;
 }
@@ -243,25 +245,28 @@ a:not([href]):active {
   height: 36px;
 }
 
-.catalog-page .wrap-logo {
+.header-logo,
+.footer-logo {
   background-image: url("../img/sprite-logo-device.png");
   background-repeat: no-repeat;
   background-position: -5px -5px;
 }
 
-.catalog-page .header-logo:hover,
-.catalog-page .header-logo:focus {
+.header-logo:hover,
+.header-logo:focus {
   background-position: -5px -97px;
   opacity: 1;
 }
 
-.catalog-page .header-logo:active {
+.header-logo:active {
   background-position: -5px -51px;
   opacity: 1;
 }
 
-.catalog-page .wrap-logo:hover img,
-.catalog-page .wrap-logo:active img {
+.header-logo:hover img,
+.header-logo:active img,
+.footer-logo:hover img,
+.footer-logo:active img {
   display: none;
 }
 
@@ -320,7 +325,7 @@ a:not([href]):active {
   outline: none;
 }
 
-.js .search-form input[type="search"].bottom-line {
+.js .search-field.bottom-line {
   border-bottom: 2px solid #000;
 }
 
@@ -359,24 +364,24 @@ a:not([href]):active {
   display: block;
 }
 
-.js .search-form button {
+.js .search-button {
   display: none;
 }
 
-.js .search-form .btn-show {
+.js .search-button.btn-show {
   display: block;
 }
 
-.search-form button:focus {
+.search-button:focus {
   outline: none;
 }
 
-.search-form button:hover {
+.search-button:hover {
   color: #fff;
   background-color: #000;
 }
 
-.search-form button:active {
+.search-button:active {
   color: rgba(255,255,255,0.3);
   background-color: #000;
 }
@@ -388,17 +393,25 @@ a:not([href]):active {
 .user-nav {
   float: left;
   max-width: 260px;
+  font-size: 0;
+}
+
+.user-nav a {
+  font-size: 15px;
 }
 
 .commerce-nav {
   float: right;
   max-width: 240px;
   text-align: right;
+  font-size: 0;
 }
 
 .commerce-nav div {
   display: inline-block;
-  margin-right: 30px;
+  vertical-align: top;
+  margin-right: 35px;
+  font-size: 15px;
 }
 
 .commerce-nav div:last-child {
@@ -514,7 +527,7 @@ a:not([href]):active {
 .promo-controls {
   position: absolute;
   right: 60px;
-  bottom: 147px;
+  bottom: 140px;
   margin: 0;
   padding: 0;
   z-index: 10;
@@ -526,6 +539,7 @@ a:not([href]):active {
 
 .promo-controls li {
   display: inline-block;
+  vertical-align: middle;
   font-size: 0;
   width: 4px;
   height: 4px;
@@ -598,7 +612,7 @@ a:not([href]):active {
   right: 48px;
   margin: 0;
   padding: 0;
-  font: 179px/0.8 "Gillroy", "Arial", sans;
+  font: 179px/0.8 "Gillroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   color: #fff;
@@ -614,7 +628,7 @@ a:not([href]):active {
   position: relative;
   margin-top: 77px;
   margin-bottom: 20px;
-  font: 47px/1.2 "Gillroy", "Arial", sans;
+  font: 47px/1.2 "Gillroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   z-index: 5;
@@ -630,7 +644,7 @@ a:not([href]):active {
 }
 
 .item-parameters th {
-  font: 36px/1.2 "Gillroy", "Arial", sans;
+  font: 36px/1.2 "Gillroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 200;
   text-align: left;
@@ -652,7 +666,7 @@ a:not([href]):active {
 .catalog {
   position: relative;
   top: -5px;
-  margin-bottom: 180px;
+  margin-bottom: 140px;
  }
 
 .catalog-list {
@@ -664,20 +678,23 @@ a:not([href]):active {
 
 .catalog-list li {
   display: inline-block;
+  vertical-align: top;
   width: 160px;
   margin-right: 40px;
+  margin-bottom: 40px;
   font-size: 18px;
   line-height: 1.2;
-  vertical-align: top;
 }
 
-.catalog-list li:last-child { margin-right: 0; }
+.catalog-list li:nth-child(6n) {
+  margin-right: 0;
+}
 
 .catalog-list .link-popular {
   display: block;
   position: relative;
   padding-top: 195px;
-  font: 18px/1.2 "Gillroy", "Arial", sans;
+  font: 18px/1.2 "Gillroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
 
@@ -691,7 +708,6 @@ a:not([href]):active {
   opacity: 1;
   color: rgba(0,0,0,0.3);
 }
-
 
 .catalog-list .link-popular::before {
   position: absolute;
@@ -877,7 +893,7 @@ a:not([href]):active {
 }
 
 .service-info-title {
-  font: 47px/1.2 "Gillroy", "Arial", sans;
+  font: 47px/1.2 "Gillroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   margin-top: 39px;
@@ -891,9 +907,10 @@ a:not([href]):active {
 }
 
 .logo-item {
-  display: inline-block;;
+  display: inline-block;
+  vertical-align: middle;
   width: 260px;
-  height: 100px;
+  min-height: 100px;
   margin-right: 40px;
   opacity: 0.2;
 }
@@ -902,8 +919,13 @@ a:not([href]):active {
   opacity: 1;
 }
 
-.logo-item:last-child {
+.logo-item:nth-child(4n) {
   margin-right: 0;
+}
+
+.logo-item img {
+  width: 100%;
+  height: auto;
 }
 
 .company-info {
@@ -911,7 +933,7 @@ a:not([href]):active {
 }
 
 .company-info-title {
-  font: 47px/1.2 "Gillroy", "Arial", sans;
+  font: 47px/1.2 "Gillroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   margin-bottom: 37px;
@@ -939,7 +961,7 @@ a:not([href]):active {
   padding-top: 7px;
   margin-bottom: 54px;
   list-style: none;
-  font: 16px/2.5 "Gillroy", "Arial", sans;
+  font: 16px/2.5 "Gillroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
 }
@@ -1026,6 +1048,7 @@ a:not([href]):active {
 .footer-extra-nav .compare,
 .footer-extra-nav .cart {
   display: inline-block;
+  vertical-align: baseline;
   width: auto;
   padding-right: 35px;
 }
@@ -1104,13 +1127,15 @@ a:not([href]):active {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-top: 3px;
-  padding-left: 5px;
+  padding-top: 7px;
+  padding-left: 4px;
   text-align: center;
+  font-size: 0;
 }
 
 .footer-nav li {
   display: inline-block;
+  vertical-align: top;
   margin-right: 30px;
 }
 
@@ -1125,10 +1150,17 @@ a:not([href]):active {
 .footer-tel {
   float: right;
   width: 280px;
+  text-align: right;
+  color: #fff;
+  text-decoration: none;
+
 }
 
-.footer-tel {
-  text-align: right;
+.footer-tel:hover,
+.footer-tel:focus,
+.footer-tel:active {
+  color: #fff;
+  text-decoration: none;
 }
 
 .footer-bottom {
@@ -1156,11 +1188,11 @@ a:not([href]):active {
 
 .footer-social a {
   display: inline-block;
+  vertical-align: middle;
   width: 39px;
   height: 38px;
   margin-right: 10px;
   font-size: 0;
-  vertical-align: middle;
 }
 
 .footer-social a:active {
@@ -1312,7 +1344,7 @@ a:not([href]):active {
 .form-writeus label {
   display: block;
   margin-bottom: 6px;
-  font: 18px/1 "Gillroy", "Arial", sans;
+  font: 18px/1 "Gillroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
 }
@@ -1324,7 +1356,7 @@ a:not([href]):active {
   padding: 7px 15px;
   border: 3px solid #f2f2f2;
   margin-top: 6px;
-  font: 14px/18px "Open Sans", "Arial", sans;
+  font: 14px/18px "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   color: rgba(70, 70, 70, 0.4);
@@ -1420,7 +1452,7 @@ a:not([href]):active {
 .pagination {
   font-size: 47px;
   line-height: 1.2;
-  font-family: "Gillroy", "Arial", sans;
+  font-family: "Gillroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   margin: 0;
@@ -1454,18 +1486,21 @@ a:not([href]):active {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-size: 0;
 }
 
 .breadcrumbs li {
   display: inline-block;
+  vertical-align: top;
+  font-size: 15px;
   position: relative;
-  padding-right: 30px;
+  padding-right: 33px;
 }
 
 .breadcrumbs li:not(:last-child)::after {
   position: absolute;
   top: 45%;
-  right: 15px;
+  right: 16px;
   content: "";
   width: 4px;
   height: 4px;
@@ -1499,6 +1534,9 @@ a:not([href]):active {
 
 .main {
   display: table;
+  border: none;
+  outline: none;
+  border-collapse: separate;
 }
 
 .main-row-top,
@@ -1567,8 +1605,9 @@ a:not([href]):active {
 .sorting .main-cell-title,
 .sorting-type {
   display: inline-block;
-  margin-right: 50px;
   vertical-align: bottom;
+  margin-right: 50px;
+
 }
 
 .sorting-direction {
@@ -1619,14 +1658,14 @@ a:not([href]):active {
   vertical-align: top;
 }
 
-.sorting-direction li:first-child a {
+.sorting-direction .sorting-up {
   border-top: none;
   border-left-color: transparent;
   border-right-color: transparent;
   margin-right: 26px;
 }
 
-.sorting-direction li:last-child a {
+.sorting-direction .sorting-down {
   border-bottom: none;
   border-left-color: transparent;
   border-right-color: transparent;
@@ -1710,7 +1749,7 @@ a:not([href]):active {
   padding: 0;
   font-size: 14px;
   line-height: 22px;
-  font-family: "Gillroy", "Arial", sans;
+  font-family: "Gillroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 200;
   color: rgba(0, 0, 0, 0.2);
@@ -1720,7 +1759,7 @@ a:not([href]):active {
   width: 67px;
   border: none;
   outline: none;
-  background-color: inherit;
+  background-color: #eee;
 }
 
 .filters-color {
@@ -1853,7 +1892,7 @@ a:not([href]):active {
   position: relative;
   display: inline-block;
   width: 360px;
-  margin-right: 40px;
+  margin-right: 39px;
   margin-bottom: 50px;
   vertical-align: top;
   font-size: 0;
@@ -1870,7 +1909,7 @@ a:not([href]):active {
   right: 26px;
   font-size: 14px;
   line-height: 20px;
-  font-family: "Gillroy", "Arial", sans;
+  font-family: "Gillroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   color: #cecece;
@@ -1891,6 +1930,13 @@ a:not([href]):active {
 .monopods-item-img {
   position: relative;
   margin-bottom: 33px;
+  width: 360px;
+  min-height: 380px;
+}
+
+.monopods-item-img img {
+  width: 100%;
+  height: auto;
 }
 
 .monopods-overlay {
@@ -1983,11 +2029,14 @@ a:not([href]):active {
   padding-left: 15px;
   background-color: inherit;
   text-align: center;
+  font-size: 0;
 }
 
 .pages a {
   display: inline-block;
+  vertical-align: middle;
   padding: 25px 10px;
+  font-size: 16px;
   opacity: 0.3;
 }
 
